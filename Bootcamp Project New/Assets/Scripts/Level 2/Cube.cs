@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Cube : MonoBehaviour
 {
-    [SerializeField] private Light pointLight;
+    [SerializeField] private Material selectedCubeMaterial;
+    [SerializeField] private Material normalCubeMaterial;
+
+    // [SerializeField] private CubeType cubeType;
     [SerializeField] private Transform normalCubeParent;
     [SerializeField] private Transform selectedCubeParent;
 
@@ -19,7 +22,22 @@ public class Cube : MonoBehaviour
         rb = transform.GetComponent<Rigidbody>();
         chooseCubeType = GetComponentInParent<ChooseCubeType>();
 
+        AssignMaterials();
         ChooseParent();
+    }
+
+    private void AssignMaterials()
+    {
+        if (chooseCubeType.cubeType == CubeType.Normal)
+        {
+            // Assign the proper material to cube if its not selected.
+            gameObject.GetComponent<MeshRenderer>().material = normalCubeMaterial;
+        }
+        else
+        {
+            // Assign the proper material to cube if its selected.
+            gameObject.GetComponent<MeshRenderer>().material = selectedCubeMaterial;
+        }
     }
 
     private void ChooseParent()
@@ -36,12 +54,6 @@ public class Cube : MonoBehaviour
         }
     }
 
-    private void TurnOnTheLight()
-    {
-        // Set active the light component.
-        pointLight.gameObject.SetActive(true);
-    }
-
     /// <summary>
     /// OnTriggerEnter is called when the Collider other enters the trigger.
     /// </summary>
@@ -52,8 +64,8 @@ public class Cube : MonoBehaviour
         {
             if (chooseCubeType.cubeType == CubeType.Selected)
             {
-                // Turn on the light component.
-                TurnOnTheLight();
+                // Change materials emission value to 1
+                selectedCubeMaterial.EnableKeyword("_EMISSION");
             }
             else
             {
