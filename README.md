@@ -91,4 +91,31 @@ https://miro.com/app/board/uXjVM_qYxF4=/
 ![8b5f38a2-e10b-4aeb-b0d2-fa5bbc4c265d](https://github.com/agahkaramustafa/Bootcamp2023-Takim-U-118/assets/92624533/1de087e9-cbd2-44cc-bc5c-5f31aba3dda9)
 
 
+# **Sprint 3**
+- Sprint Notları:User storyler backloglara yerleştirildi. Sprint 3 de sahne tasarımı,hata kontrol ve karakter kontrolü üzerine yoğunlaşıldı. Github ile ilgili yaşanılan sorunlar çözüldü
+-  Tamamlanması tahmin edilen puan: 400 puan
+- Puan tamamlama mantığı: 3. sprint için toplam tamamlanması gereken 400 puan bulunmaktadır. Hedeflenen backlogların ½95 kısmı halledilip bir kısmı ise yapılma aşamasında olduğu için bu sprintte 380 puan toplandı.
+- Backlog düzeni: Bu sprintte backlog düzeni levellerin çalışıp çalışmaması üzerine ve karakter düşman hareketlerinde sorun olup olmadığı üzerine gidilecek şekilde düzenlenmiştir.Genel olarak hatalara odaklanılma ve eksikleri halletme üzerine gidilmiştir
+- Daily Scrum: Daily Scrum'lar genel olarak whatsapp ve discord üzerinden yapıldı. Çoğu zaman tüm takım üyeleri toplantıya dahil olsa da bazı zamanlar aynı level üzerine çalışan kişiler kendi aralarında toplantı da düzenlemiştir.
+
+https://miro.com/app/board/uXjVM_qYxF4=/
+
+- Sprint Review: Levellerin tasarımı bitti, levellerde çıkan sorunlar üzerine yoğunlaşıldı, githubda yaşanan sorunlar çözüldü. karakter hareket ederken çıkacak sesler eklendi. levellerin bulmaca kısımları yapıldı. levellerde değişikliğe gidildi ve yeni bir level eklendi. Oyunun hikayesi için youtube videosu çekildi.
+
+- Sprint Retrospective:
+- 1. Github da sorun yaşadık yeni repo açmaya karar verip değişikliğe gittik.
+  2. Takımda herkesin eşit yüke sahip olması için her alanda herkesin az da olsa çalışmasına karar verdik
+  3. Bu sprintte genel olarak hatalar üzerine yoğunlaştık
+
+![image](https://github.com/agahkaramustafa/Bootcamp2023-Takim-U-118-New/assets/92624533/6cb43f6b-0422-4ae0-843f-879dc9c4ff4c)
+![image](https://github.com/agahkaramustafa/Bootcamp2023-Takim-U-118-New/assets/92624533/67dbca72-7f07-408e-a081-1e59e48466cc)
+![image](https://github.com/agahkaramustafa/Bootcamp2023-Takim-U-118-New/assets/92624533/edf4aac3-993b-411d-ae2f-3dbba87c2038)
+![image](https://github.com/agahkaramustafa/Bootcamp2023-Takim-U-118-New/assets/92624533/bc92de0d-0b4a-43b8-ae15-341c02869085)
+![image](https://github.com/agahkaramustafa/Bootcamp2023-Takim-U-118-New/assets/92624533/c41ae13f-7c23-42c0-b50d-2596683f222a)
+![image](https://github.com/agahkaramustafa/Bootcamp2023-Takim-U-118-New/assets/92624533/5bd4c8b3-fa79-4712-9cf0-7ec41ff84d97)
+![image](https://github.com/agahkaramustafa/Bootcamp2023-Takim-U-118-New/assets/92624533/46ca4c8a-9744-4e82-9a35-e9baa756d417)
+
+
+
+
 
