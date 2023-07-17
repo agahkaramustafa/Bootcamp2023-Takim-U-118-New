@@ -28,6 +28,7 @@ public class Enemy : MonoBehaviour
             if (other.CompareTag("Sword") && allowHit)
             {
                 enemyHealthScript.TakeDamage(playerDamage);
+                playerHitProcessScript.HitSound();
                 StartCoroutine(nameof(ToggleAllowHitRoutine));
                 Debug.Log("Enemy hit succesful");
             }
