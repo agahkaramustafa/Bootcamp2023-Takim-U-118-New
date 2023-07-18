@@ -8,7 +8,7 @@ using TMPro;
 public class MenuController : MonoBehaviour
 {
     [Header("Volume Setting")]
-    [SerializeField] private TMP_Text s�f�rbes;
+    [SerializeField] private TMP_Text sifirbes;
     [SerializeField] private Slider volumeSlider;
     [SerializeField] private float defaultVolume = 1.0f;
 
@@ -38,7 +38,7 @@ public class MenuController : MonoBehaviour
     public void SetVolume(float volume)
     {
         AudioListener.volume = volume;
-        s�f�rbes.text = volume.ToString("0.0");
+        sifirbes.text = volume.ToString("0.0");
     }
 
     public void VolumeApply()
@@ -90,7 +90,7 @@ public class MenuController : MonoBehaviour
         if (PlayerPrefs.HasKey("masterVolume"))
         {
             float localVolume = PlayerPrefs.GetFloat("masterVolume");
-            s�f�rbes.text = localVolume.ToString("0.0");
+            sifirbes.text = localVolume.ToString("0.0");
             volumeSlider.value = localVolume;
             AudioListener.volume = localVolume;
         }
