@@ -10,16 +10,12 @@ public class LoadPrefs : MonoBehaviour
     [SerializeField] private TMP_Text volumeTextValue;
     [SerializeField] private Slider volumeSlider;
 
-    [Header("Graphics Settings")]
-    [SerializeField] private TMP_Dropdown qualityDropdown;
-    [SerializeField] private Toggle fullscreenToggle;
-
     private void Start()
     {
         LoadPlayerPrefs();
     }
 
-   private void LoadPlayerPrefs()
+    private void LoadPlayerPrefs()
     {
         if (PlayerPrefs.HasKey("masterVolume"))
         {
@@ -27,20 +23,6 @@ public class LoadPrefs : MonoBehaviour
             volumeTextValue.text = localVolume.ToString("0.0");
             volumeSlider.value = localVolume;
             AudioListener.volume = localVolume;
-        }
-
-        if (PlayerPrefs.HasKey("masterQuality"))
-        {
-            int localQuality = PlayerPrefs.GetInt("masterQuality");
-            qualityDropdown.value = localQuality;
-            QualitySettings.SetQualityLevel(localQuality);
-        }
-
-        if (PlayerPrefs.HasKey("masterFullscreen"))
-        {
-            int localFullscreen = PlayerPrefs.GetInt("masterFullscreen");
-            fullscreenToggle.isOn = localFullscreen == 1;
-            Screen.fullScreen = fullscreenToggle.isOn;
         }
     }
 }
