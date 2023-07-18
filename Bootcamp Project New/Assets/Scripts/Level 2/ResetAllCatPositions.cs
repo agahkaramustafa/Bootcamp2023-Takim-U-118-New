@@ -9,8 +9,4 @@ public class ResetAllCatPositions : MonoBehaviour
         BroadcastMessage("ResetMonumentPositions");
     }
 
-    private void ResetMonumentPositions()
-    {
-        Debug.Log("Pozisyonlar resetlendi");
-    }
 }
