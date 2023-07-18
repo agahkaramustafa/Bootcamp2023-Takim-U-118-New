@@ -97,10 +97,4 @@ public class CatMonuments : MonoBehaviour
 
         StopCoroutine("MoveMonumentRoutine");
     }
-
-    void OnDrawGizmosSelected() 
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, interactionRange);
-    }
 }
