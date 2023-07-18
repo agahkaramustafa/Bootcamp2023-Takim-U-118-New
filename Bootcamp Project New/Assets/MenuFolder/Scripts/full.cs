@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class full : MonoBehaviour
 {
-    [SerializeField] private Toggle fullscreenToggle;
+    [SerializeField] private Toggle fullekrantusu;
 
     private void Start()
     {
@@ -19,7 +19,7 @@ public class full : MonoBehaviour
 
     public void ApplyFullScreen()
     {
-        PlayerPrefs.SetInt("masterFullscreen", fullscreenToggle.isOn ? 1 : 0);
+        PlayerPrefs.SetInt("masterFullscreen", fullekrantusu.isOn ? 1 : 0);
     }
 
     private void LoadFullScreen()
@@ -27,8 +27,8 @@ public class full : MonoBehaviour
         if (PlayerPrefs.HasKey("masterFullscreen"))
         {
             int localFullscreen = PlayerPrefs.GetInt("masterFullscreen");
-            fullscreenToggle.isOn = localFullscreen == 1;
-            Screen.fullScreen = fullscreenToggle.isOn;
+            fullekrantusu.isOn = localFullscreen == 1;
+            Screen.fullScreen = fullekrantusu.isOn;
         }
     }
 }

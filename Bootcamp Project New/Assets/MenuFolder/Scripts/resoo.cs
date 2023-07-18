@@ -5,7 +5,7 @@ using TMPro;
 
 public class resoo: MonoBehaviour
 {
-    [SerializeField] private TMP_Dropdown resolutionDropdown;
+    [SerializeField] private TMP_Dropdown cozunurluk;
     private Resolution[] resolutions;
 
     private void Start()
@@ -21,7 +21,7 @@ public class resoo: MonoBehaviour
 
     public void ApplyResolution()
     {
-        int resolutionIndex = resolutionDropdown.value;
+        int resolutionIndex = cozunurluk.value;
         PlayerPrefs.SetInt("masterResolution", resolutionIndex);
         SetResolution(resolutionIndex);
     }
@@ -29,7 +29,7 @@ public class resoo: MonoBehaviour
     private void LoadResolutions()
     {
         resolutions = Screen.resolutions;
-        resolutionDropdown.ClearOptions();
+        cozunurluk.ClearOptions();
 
         List<string> options = new List<string>();
         int currentResolutionIndex = 0;
@@ -50,9 +50,8 @@ public class resoo: MonoBehaviour
                 currentResolutionIndex = i;
             }
         }
-
-        resolutionDropdown.AddOptions(options);
-        resolutionDropdown.value = currentResolutionIndex;
-        resolutionDropdown.RefreshShownValue();
+        cozunurluk.AddOptions(options);
+        cozunurluk.value = currentResolutionIndex;
+        cozunurluk.RefreshShownValue();
     }
 }

@@ -7,7 +7,7 @@ using TMPro;
 public class LoadPrefs : MonoBehaviour
 {
     [Header("Volume Setting")]
-    [SerializeField] private TMP_Text volumeTextValue;
+    [SerializeField] private TMP_Text sýfýrbes;
     [SerializeField] private Slider volumeSlider;
 
     private void Start()
@@ -20,7 +20,7 @@ public class LoadPrefs : MonoBehaviour
         if (PlayerPrefs.HasKey("masterVolume"))
         {
             float localVolume = PlayerPrefs.GetFloat("masterVolume");
-            volumeTextValue.text = localVolume.ToString("0.0");
+            sýfýrbes.text = localVolume.ToString("0.0");
             volumeSlider.value = localVolume;
             AudioListener.volume = localVolume;
         }
