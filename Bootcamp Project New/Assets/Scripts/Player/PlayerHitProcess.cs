@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerHitProcess : MonoBehaviour
 {
+    [SerializeField] AudioClip[] swingSounds = new AudioClip[2];
+    [SerializeField] AudioClip[] hitSounds = new AudioClip[3];
+
     public bool Hit1Activated { get { return hit1Activated; } }
     private bool hit1Activated = false;
 
@@ -82,5 +85,17 @@ public class PlayerHitProcess : MonoBehaviour
             anim.SetBool("Hit2", true);
             hit2Activated = anim.GetBool("Hit2");
         }
+    }
+
+    public void SwingSound()
+    {
+        int swingSoundIndex = Random.Range(0, 2);
+        AudioSource.PlayClipAtPoint(swingSounds[swingSoundIndex], transform.position);
+    }
+
+    public void HitSound()
+    {
+        int hitSoundIndex = Random.Range(0, 3);
+        AudioSource.PlayClipAtPoint(hitSounds[hitSoundIndex], transform.position);
     }
 }
