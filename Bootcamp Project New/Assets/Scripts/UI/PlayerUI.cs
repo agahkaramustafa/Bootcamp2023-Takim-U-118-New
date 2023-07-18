@@ -32,5 +32,19 @@ public class PlayerUI : MonoBehaviour
 
         manaBarSprite.fillAmount = 0f / maxActivationTime;
         hasMana = false;
+        StartCoroutine(ManaRefillRoutine(5f, 0f));
+    }
+
+    IEnumerator ManaRefillRoutine(float maxActivationTime, float currentActivationTime)
+    {
+        while (currentActivationTime / maxActivationTime <= 0.98f)
+        {
+            manaBarSprite.fillAmount = currentActivationTime / maxActivationTime;
+            currentActivationTime += Time.deltaTime;
+            yield return null;
+        }
+
+        manaBarSprite.fillAmount = 5f / maxActivationTime;
+        hasMana = true;
     }
 }

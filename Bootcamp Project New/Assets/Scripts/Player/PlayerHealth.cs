@@ -9,11 +9,13 @@ public class PlayerHealth : MonoBehaviour
     private float currentHealth;
     Animator anim;
     PlayerUI playerUIScript;
+    GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
         playerUIScript = FindObjectOfType<PlayerUI>();
+        gameManager = FindObjectOfType<GameManager>();
         anim = GetComponent<Animator>();
         currentHealth = playerMaxHealth;
         playerUIScript.UpdateHealthBar(playerMaxHealth, currentHealth);        
@@ -41,7 +43,7 @@ public class PlayerHealth : MonoBehaviour
             // deathhandler script
             playerUIScript.gameObject.SetActive(false);
             anim.SetTrigger("IsDead");
-            Debug.Log("Player is PEPSI");
+            gameManager.RestartLevel();
         }
     }
 }

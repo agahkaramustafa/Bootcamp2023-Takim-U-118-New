@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     private PlayerHitProcess playerHitProcessScript;
     private EnemyHealth enemyHealthScript;
     private bool allowHit = true;
-    private int playerDamage = 5;
+    private int playerDamage = 25;
 
     private WaitForSeconds takenDamageWait = new WaitForSeconds(.8f);
 

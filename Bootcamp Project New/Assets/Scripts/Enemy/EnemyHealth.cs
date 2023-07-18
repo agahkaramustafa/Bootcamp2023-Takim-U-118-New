@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    [SerializeField] float enemyMaxHealth = 100;
+    [SerializeField] float enemyMaxHealth = 50;
 
     Animator anim;
     EnemyAI enemyAI;
@@ -47,5 +47,12 @@ public class EnemyHealth : MonoBehaviour
         healthBarScript.gameObject.SetActive(false);
         enemyAI.enabled = false;
         m_collider.enabled = false;
+        StartCoroutine("DestroyEnemyRoutine");
+    }
+
+    IEnumerator DestroyEnemyRoutine()
+    {
+        yield return new WaitForSeconds(10);
+        Destroy(gameObject);
     }
 }

@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] DissolveChilds dissolveChilds;
 
     private PlayerUI playerUIScript;
-    private WaitForSeconds powerUpWaitTime = new WaitForSeconds(5);
+    private WaitForSeconds powerUpWaitTime = new WaitForSeconds(19);
 
     public bool HasPowerUp { get { return hasPowerUp; } }
     private bool hasPowerUp;
@@ -47,7 +47,7 @@ public class Player : MonoBehaviour
         powerUpParticleSystem.Play();
         horusSwordPrefab.SetActive(hasPowerUp);
         dissolveChilds.Respawn();
-        playerUIScript.UpdateManaBar(5f, 5f);
+        playerUIScript.UpdateManaBar(20f, 20f);
         yield return powerUpWaitTime;
         dissolveChilds.Dissolve();
         yield return new WaitForSeconds(2f);
