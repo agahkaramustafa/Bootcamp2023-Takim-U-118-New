@@ -8,14 +8,14 @@ using TMPro;
 public class MenuController : MonoBehaviour
 {
     [Header("Volume Setting")]
-    [SerializeField] private TMP_Text volumeTextValue;
+    [SerializeField] private TMP_Text sýfýrbes;
     [SerializeField] private Slider volumeSlider;
     [SerializeField] private float defaultVolume = 1.0f;
 
     [Header("Graphics Settings")]
-    [SerializeField] private TMP_Dropdown qualityDropdown;
-    [SerializeField] private TMP_Dropdown resolutionDropdown;
-    [SerializeField] private Toggle fullscreenToggle;
+    [SerializeField] private TMP_Dropdown kalite;
+    [SerializeField] private TMP_Dropdown cozunurluk;
+    [SerializeField] private Toggle fullekrantusu;
 
     [Header("Confirmation")]
     [SerializeField] private GameObject confirmationPrompt;
@@ -37,7 +37,7 @@ public class MenuController : MonoBehaviour
     public void SetVolume(float volume)
     {
         AudioListener.volume = volume;
-        volumeTextValue.text = volume.ToString("0.0");
+        sýfýrbes.text = volume.ToString("0.0");
     }
 
     public void VolumeApply()
@@ -54,9 +54,9 @@ public class MenuController : MonoBehaviour
                 volumeSlider.value = defaultVolume;
                 break;
             case "Graphics":
-                qualityDropdown.value = QualitySettings.GetQualityLevel();
-                resolutionDropdown.value = GetCurrentResolutionIndex();
-                fullscreenToggle.isOn = Screen.fullScreen;
+                kalite.value = QualitySettings.GetQualityLevel();
+                cozunurluk.value = GetCurrentResolutionIndex();
+                fullekrantusu.isOn = Screen.fullScreen;
                 break;
         }
     }
@@ -89,7 +89,7 @@ public class MenuController : MonoBehaviour
         if (PlayerPrefs.HasKey("masterVolume"))
         {
             float localVolume = PlayerPrefs.GetFloat("masterVolume");
-            volumeTextValue.text = localVolume.ToString("0.0");
+            sýfýrbes.text = localVolume.ToString("0.0");
             volumeSlider.value = localVolume;
             AudioListener.volume = localVolume;
         }
@@ -98,7 +98,7 @@ public class MenuController : MonoBehaviour
     private void LoadResolutions()
     {
         resolutions = Screen.resolutions;
-        resolutionDropdown.ClearOptions();
+        cozunurluk.ClearOptions();
 
         List<string> options = new List<string>();
         int currentResolutionIndex = 0;
@@ -114,14 +114,14 @@ public class MenuController : MonoBehaviour
             }
         }
 
-        resolutionDropdown.AddOptions(options);
-        resolutionDropdown.value = currentResolutionIndex;
-        resolutionDropdown.RefreshShownValue();
+        cozunurluk.AddOptions(options);
+        cozunurluk.value = currentResolutionIndex;
+        cozunurluk.RefreshShownValue();
     }
 
     private void LoadQualitySettings()
     {
-        qualityDropdown.ClearOptions();
+        kalite.ClearOptions();
 
         List<string> options = new List<string>();
         string[] qualityNames = QualitySettings.names;
@@ -137,9 +137,9 @@ public class MenuController : MonoBehaviour
             }
         }
 
-        qualityDropdown.AddOptions(options);
-        qualityDropdown.value = currentQualityIndex;
-        qualityDropdown.RefreshShownValue();
+        kalite.AddOptions(options);
+       kalite.value = currentQualityIndex;
+        kalite.RefreshShownValue();
     }
 
     private int GetCurrentResolutionIndex()

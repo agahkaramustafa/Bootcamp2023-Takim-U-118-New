@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class quality : MonoBehaviour
 {
-    [SerializeField] private TMP_Dropdown qualityDropdown;
+    [SerializeField] private TMP_Dropdown kalite;
 
     private void Start()
     {
@@ -20,7 +20,7 @@ public class quality : MonoBehaviour
 
     public void ApplyQualityLevel()
     {
-        int qualityIndex = qualityDropdown.value;
+        int qualityIndex = kalite.value;
         PlayerPrefs.SetInt("masterQuality", qualityIndex);
     }
 
@@ -29,7 +29,7 @@ public class quality : MonoBehaviour
         if (PlayerPrefs.HasKey("masterQuality"))
         {
             int localQuality = PlayerPrefs.GetInt("masterQuality");
-            qualityDropdown.value = localQuality;
+            kalite.value = localQuality;
             QualitySettings.SetQualityLevel(localQuality);
         }
     }

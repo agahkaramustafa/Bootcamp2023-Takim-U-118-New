@@ -509,7 +509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e56341038d7354b934a45e6f74084f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resolutionDropdown: {fileID: 1398086649}
+  cozunurluk: {fileID: 1398086649}
 --- !u!4 &178096027
 Transform:
   m_ObjectHideFlags: 0
@@ -1435,7 +1435,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Volume
+  m_text: 0,5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2dc3bc1f2ae7e8744a5d19ee3a9c73a2, type: 2}
   m_sharedMaterial: {fileID: -4130513869130519383, guid: 2dc3bc1f2ae7e8744a5d19ee3a9c73a2,
@@ -2937,7 +2937,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &528868924
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3000,7 +3000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7d6ae9c14101d8408a48b39df90a570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  qualityDropdown: {fileID: 1354504252}
+  kalite: {fileID: 1354504252}
 --- !u!4 &530126294
 Transform:
   m_ObjectHideFlags: 0
@@ -4216,7 +4216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a36afc85335f0643b7452e6727abe1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullscreenToggle: {fileID: 1585106083}
+  fullekrantusu: {fileID: 1585106083}
 --- !u!4 &615703409
 Transform:
   m_ObjectHideFlags: 0
@@ -7858,7 +7858,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0,5
+  m_text: Volume
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2dc3bc1f2ae7e8744a5d19ee3a9c73a2, type: 2}
   m_sharedMaterial: {fileID: -4130513869130519383, guid: 2dc3bc1f2ae7e8744a5d19ee3a9c73a2,
@@ -9709,7 +9709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ce5d9655034c074e92c7d4e89aec84a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTextValue: {fileID: 1365123059}
+  "s\u0131f\u0131rbes": {fileID: 241388646}
   volumeSlider: {fileID: 1161110709}
 --- !u!4 &1739679209
 Transform:
@@ -10084,12 +10084,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecd9806a4a4dda43933e44bd6b46a5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTextValue: {fileID: 1365123059}
+  "s\u0131f\u0131rbes": {fileID: 241388646}
   volumeSlider: {fileID: 1161110709}
   defaultVolume: 1
-  qualityDropdown: {fileID: 1354504252}
-  resolutionDropdown: {fileID: 1354504252}
-  fullscreenToggle: {fileID: 1585106083}
+  kalite: {fileID: 1354504252}
+  cozunurluk: {fileID: 1398086649}
+  fullekrantusu: {fileID: 1585106083}
   confirmationPrompt: {fileID: 406128371}
   newGameLevel: video
   noSavedGameDialog: {fileID: 1530383095}
