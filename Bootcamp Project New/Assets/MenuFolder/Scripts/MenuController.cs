@@ -8,11 +8,12 @@ using TMPro;
 public class MenuController : MonoBehaviour
 {
     [Header("Volume Setting")]
-    [SerializeField] private TMP_Text sýfýrbes;
+    [SerializeField] private TMP_Text sï¿½fï¿½rbes;
     [SerializeField] private Slider volumeSlider;
     [SerializeField] private float defaultVolume = 1.0f;
 
     [Header("Graphics Settings")]
+
     [SerializeField] private TMP_Dropdown kalite;
     [SerializeField] private TMP_Dropdown cozunurluk;
     [SerializeField] private Toggle fullekrantusu;
@@ -37,7 +38,7 @@ public class MenuController : MonoBehaviour
     public void SetVolume(float volume)
     {
         AudioListener.volume = volume;
-        sýfýrbes.text = volume.ToString("0.0");
+        sï¿½fï¿½rbes.text = volume.ToString("0.0");
     }
 
     public void VolumeApply()
@@ -89,7 +90,7 @@ public class MenuController : MonoBehaviour
         if (PlayerPrefs.HasKey("masterVolume"))
         {
             float localVolume = PlayerPrefs.GetFloat("masterVolume");
-            sýfýrbes.text = localVolume.ToString("0.0");
+            sï¿½fï¿½rbes.text = localVolume.ToString("0.0");
             volumeSlider.value = localVolume;
             AudioListener.volume = localVolume;
         }
@@ -140,6 +141,7 @@ public class MenuController : MonoBehaviour
         kalite.AddOptions(options);
        kalite.value = currentQualityIndex;
         kalite.RefreshShownValue();
+
     }
 
     private int GetCurrentResolutionIndex()

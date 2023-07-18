@@ -50,7 +50,6 @@ public class resoo: MonoBehaviour
                 currentResolutionIndex = i;
             }
         }
-
         cozunurluk.AddOptions(options);
         cozunurluk.value = currentResolutionIndex;
         cozunurluk.RefreshShownValue();
